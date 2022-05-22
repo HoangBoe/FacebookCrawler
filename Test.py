@@ -45,8 +45,8 @@ sleep(5)
 # sleep(5)
 #comment_list = browser.find_elements_by_class_name("l9j0dhe7 ecm0bbzt rz4wbd8a qt6c0cv9 dati1w0a j83agx80 btwxx1t3 lzcic4wl")
 #comment_list = browser.find_elements_by_class_name("rj1gh0hx buofh1pr ni8dbmo4 stjgntxs hv4rvrfc")
-comment_list = len(browser.find_elements(By.XPATH, "//div[@role='article']"))
-print(comment_list)
+comment_list = browser.find_elements(By.XPATH, "//div[@role='article']")
+# print(comment_list)
 
 # for comment in comment_list:
 #     poster = comment.find_element(By.XPATH, '//*[@id="mount_0_0_Wn"]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[4]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div[2]/div/div[4]/div/div/div[2]/ul/li[1]/div[1]/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div/span/div/div')
