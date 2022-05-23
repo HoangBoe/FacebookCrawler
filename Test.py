@@ -1,8 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome import service
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from selenium.webdriver.common.by import By
+
+
+from selenium.webdriver.opera.options import Options
 from random import randint
 
 # 1. Khai báo biến browser
@@ -10,11 +14,9 @@ path = "C:/Webdrivers/chromedriver.exe"
 s = Service(path)
 browser = webdriver.Chrome(service=s)
 
-
 # 2. Mở trang web Fb
 browser.get(url='https://www.facebook.com/beatvn.network/posts/3313788998938438')
 sleep(4)
-
 
 
 # Đăng nhập
@@ -43,9 +45,13 @@ sleep(5)
 
 # showmorecomments_link.click()
 # sleep(5)
-#comment_list = browser.find_elements_by_class_name("l9j0dhe7 ecm0bbzt rz4wbd8a qt6c0cv9 dati1w0a j83agx80 btwxx1t3 lzcic4wl")
-#comment_list = browser.find_elements_by_class_name("rj1gh0hx buofh1pr ni8dbmo4 stjgntxs hv4rvrfc")
-comment_list = browser.find_elements(By.XPATH, "//div[@role='article']")
+# comment_list = browser.find_elements(By.XPATH, "//div[@role='article']")
+comment_list = browser.find_elements(By.XPATH, "//div[@class='tw6a2znq sj5x9vvc d1544ag0 cxgpxx05']")
+# print(comment_list)
+
+for comment in comment_list:
+    poster = comment.text
+    print(poster)
 # print(comment_list)
 
 # for comment in comment_list:
